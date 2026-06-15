@@ -37,8 +37,8 @@ export default function RegisterPage() {
 
   function validatePassword(value: string): string | undefined {
     if (!value) return 'Password is required';
-    if (value.length < 8) return 'Password must be at least 8 characters';
-    if (value.length > 128) return 'Password must be 128 characters or less';
+    if (value.length < 8) return 'Password must be greater than or equal to 8 characters';
+    if (value.length > 128) return 'Password must be less than or equal to 128 characters';
     return undefined;
   }
 
