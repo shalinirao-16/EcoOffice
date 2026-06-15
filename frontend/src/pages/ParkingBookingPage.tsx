@@ -32,7 +32,7 @@ export default function ParkingBookingPage() {
     } catch (err) {
       const apiErr = err as ApiError;
       setSpots([]);
-      setNotification({ type: 'error', message: apiErr.error || 'Failed to load parking spots' });
+      setNotification({ type: 'error', message: apiErr.error || 'Failed to load parking spots!!' });
     } finally {
       setIsLoadingSpots(false);
     }
@@ -66,7 +66,7 @@ export default function ParkingBookingPage() {
       fetchAvailability(selectedDate, false);
     } catch (err) {
       const apiErr = err as ApiError;
-      setNotification({ type: 'error', message: apiErr.error || 'Failed to book parking spot' });
+      setNotification({ type: 'error', message: apiErr.error || 'Failed to book parking spot!!' });
       setDialogOpen(false);
     } finally {
       setIsBooking(false);
